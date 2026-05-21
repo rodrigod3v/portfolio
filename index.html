@@ -14,7 +14,9 @@
       background: #0a0a0f;
       color: #e0e0e0;
       overflow-x: hidden;
-      min-height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      height: 100vh;
     }
 
     /* ─── CANVAS BG ─── */
@@ -72,6 +74,7 @@
       position: relative;
       z-index: 1;
       min-height: 100vh;
+      scroll-snap-align: start;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -198,6 +201,8 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 5rem 1.5rem;
+      scroll-snap-align: start;
+      min-height: 100vh;
     }
     .section-title {
       font-size: 2rem;
@@ -284,6 +289,8 @@
       border-top: 1px solid rgba(124,58,237,0.1);
       font-size: 0.8rem;
       color: #555;
+      scroll-snap-align: start;
+      min-height: 20vh;
     }
     footer a { color: #7c3aed; text-decoration: none; }
 
