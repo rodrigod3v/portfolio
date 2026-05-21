@@ -1,0 +1,28 @@
+name: Quality Check
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check HTML structure
+        run: |
+          if grep -q '<!DOCTYPE html>' index.html; then
+            echo "✅ DOCTYPE found"
+          else
+            echo "❌ DOCTYPE missing"
+            exit 1
+          fi
+      - name: Validate meta tags
+        run: |
+          if grep -q 'viewport' index.html; then
+            echo "✅ Viewport meta found"
+          else
+            echo "❌ Viewport meta missing"
+            exit 1
+          fi

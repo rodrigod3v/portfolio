@@ -1,0 +1,45 @@
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Node / dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.project
+.classpath
+
+# Build
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Misc
+*.bak
+*.orig
